@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>热点方案：papi酱《生气了》x 羊绅士 - 钩织玩偶剧场</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f8f6f3;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 48px 56px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  }
+  h1 {
+    font-size: 28px;
+    color: #2c2c2c;
+    border-bottom: 3px solid #e85050;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 22px;
+    color: #444;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 4px solid #e85050;
+  }
+  h3 {
+    font-size: 18px;
+    color: #555;
+    margin-top: 28px;
+    margin-bottom: 12px;
+  }
+  h4 {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  .hot-badge {
+    display: inline-block;
+    background: #e85050;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 12px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  .meta-block {
+    background: #fff5f5;
+    border: 1px solid #fdd;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #8a3a3a;
+  }
+  .meta-block p { margin: 2px 0; }
+  .meta-block strong { color: #c03030; }
+  blockquote {
+    background: #fff5f5;
+    border-left: 4px solid #e85050;
+    padding: 12px 20px;
+    margin: 16px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 20px 0;
+    font-size: 14px;
+  }
+  th {
+    background: #fef0f0;
+    color: #8a3a3a;
+    font-weight: 600;
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid #fdd;
+  }
+  td {
+    padding: 9px 14px;
+    border: 1px solid #fdd;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fffafa; }
+  pre {
+    background: #2d2d2d;
+    color: #f0e8d8;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 10px 0 16px 0;
+    font-family: "Fira Code", "Source Code Pro", "Consolas", monospace;
+  }
+  code {
+    font-family: "Fira Code", "Source Code Pro", "Consolas", monospace;
+    font-size: 13px;
+  }
+  p code {
+    background: #fef0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #c03030;
+  }
+  hr {
+    border: none;
+    border-top: 1px solid #fdd;
+    margin: 32px 0;
+  }
+  ul, ol {
+    padding-left: 24px;
+    margin: 8px 0 16px 0;
+  }
+  li { margin: 4px 0; }
+  strong { color: #2c2c2c; }
+  .plan-card {
+    border: 1px solid #fdd;
+    border-radius: 10px;
+    padding: 24px 28px;
+    margin: 20px 0;
+    background: #fffafa;
+  }
+  .plan-card h3 {
+    margin-top: 0;
+    color: #c03030;
+    font-size: 19px;
+  }
+  .recommended {
+    border-color: #e85050;
+    background: #fff5f5;
+    box-shadow: 0 0 0 2px rgba(232,80,80,0.15);
+  }
+  .recommended h3 { color: #e85050; }
+  .section-label {
+    display: inline-block;
+    background: #e85050;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+  }
+  .time-block {
+    background: #fef0f0;
+    border: 1px solid #fdd;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+  .time-block h4 {
+    margin-top: 0;
+    color: #c03030;
+  }
+  .lyrics-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin: 12px 0 20px 0;
+  }
+  .lyrics-flow span {
+    background: #e85050;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .lyrics-flow .arrow {
+    background: none;
+    color: #ccc;
+    padding: 0;
+    font-size: 18px;
+  }
+  .footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #fdd;
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .container { box-shadow: none; padding: 24px; }
+    .plan-card { break-inside: avoid; }
+    pre { background: #f5f5f5; color: #333; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1><span class="hot-badge">HOT</span> papi酱《生气了》x 羊绅士</h1>
+
+<div class="meta-block">
+<p><span class="hot-badge">热点</span> papi酱AI单曲《生气了》爆火</p>
+<p><strong>核心梗：</strong>"OMG你吓到我了" — 全网二创BGM</p>
+<p><strong>播放量：</strong>4500万+ | <strong>涨粉：</strong>2天120万</p>
+<p><strong>匹配角色：</strong>羊绅士</p>
+<p><strong>热点窗口：</strong>48小时内（尽快发布）</p>
+</div>
+
+<hr>
+
+<!-- WHY THIS CHARACTER -->
+
+<h2>一、为什么是羊绅士</h2>
+
+<table>
+  <tr><th>歌曲核心</th><th>羊绅士人设</th><th>契合点</th></tr>
+  <tr><td>"好生气啊"</td><td>每次翻车都内心崩溃但表面维持</td><td>表面绅士 vs 内心暴躁的反差</td></tr>
+  <tr><td>"OMG你吓到我了"</td><td>啾啾每次突然冲出来撞他</td><td>完美对应被撞飞的场景</td></tr>
+  <tr><td>"你的品味配不上我"</td><td>嫌弃莓莓、嫌弃啾啾</td><td>绅士的优越感</td></tr>
+  <tr><td>"拜拜拜拜再见了"</td><td>帽子被吹走、手杖被拿走时的崩溃</td><td>形象崩塌后的绝望</td></tr>
+</table>
+
+<blockquote>
+<strong>核心创意：</strong>羊绅士的"生气"不是真的愤怒，而是"我的形象又没了"的崩溃。
+</blockquote>
+
+<div class="lyrics-flow">
+  <span>好生气啊！</span><span class="arrow">&rarr;</span>
+  <span>太没有品味了！</span><span class="arrow">&rarr;</span>
+  <span>OMG你吓到我了！</span><span class="arrow">&rarr;</span>
+  <span>你的品味配不上我啊！</span><span class="arrow">&rarr;</span>
+  <span>拜拜拜拜再见了！</span>
+</div>
+
+<hr>
+
+<!-- PLAN A -->
+
+<h2>二、抖音短视频方案</h2>
+
+<div class="plan-card recommended">
+<h3>方案A：羊绅士的一天 <span class="section-label">推荐</span></h3>
+
+<table>
+  <tr><th style="width:100px">参数</th><th>值</th></tr>
+  <tr><td>时长</td><td>15-20秒</td></tr>
+  <tr><td>比例</td><td>9:16竖屏</td></tr>
+  <tr><td>BGM</td><td>papi酱《生气了》副歌片段</td></tr>
+</table>
+
+<h4>BGM卡点分镜</h4>
+<table>
+  <tr><th>时间</th><th>BGM歌词</th><th>画面</th><th>羊绅士状态</th></tr>
+  <tr><td>0-3秒</td><td>"好生气啊"</td><td>羊绅士端正坐着，帽子手杖整齐，面前摆着咖啡</td><td>优雅、体面、一切完美</td></tr>
+  <tr><td>3-5秒</td><td>"太没有品味了"</td><td>镜头拉远，啾啾站在旁边，歪着角度</td><td>微微皱眉（身体偏一点）</td></tr>
+  <tr><td>5-8秒</td><td>"OMG你吓到我了"</td><td>啾啾突然撞过来，羊绅士被撞歪</td><td>帽子歪了，手杖倒了</td></tr>
+  <tr><td>8-11秒</td><td>"你的品味配不上我"</td><td>莓莓出现，纹丝不动，面无表情</td><td>歪着看莓莓，嫌弃</td></tr>
+  <tr><td>11-14秒</td><td>"拜拜拜拜再见了"</td><td>帽子被拿走，彻底崩溃</td><td>没帽子没手杖，缩成一团</td></tr>
+  <tr><td>14-16秒</td><td>BGM结束</td><td>定格：羊绅士歪斜+莓莓无动于衷+啾啾无辜</td><td>字幕："羊绅士的一天"</td></tr>
+</table>
+
+<h4>字幕设计</h4>
+<ul>
+  <li>全程用羊绅士的方形白底气泡</li>
+  <li>每个歌词卡点时弹出对应台词</li>
+  <li>最后一帧大字："注意形象。（已崩溃）"</li>
+</ul>
+
+<h4>发布文案</h4>
+<pre><code>羊绅士说他每天的心情就是这首歌
+
+好生气 → 维持体面
+OMG → 又被撞了
+拜拜 → 帽子又没了
+
+你的钩织玩偶听这首歌是什么反应？
+
+#papi酱 #生气了 #OMG你吓到我了 #钩织 #钩织玩偶 #毛线玩偶 #crochet #玩偶日常</code></pre>
+
+<h4>评论区预埋</h4>
+<p>羊绅士说他的品味绝对配得上这首歌（虽然他现在已经没有帽子了）</p>
+</div>
+
+<!-- PLAN B -->
+
+<div class="plan-card">
+<h3>方案B：三个玩偶听《生气了》的反应</h3>
+
+<table>
+  <tr><th style="width:100px">参数</th><th>值</th></tr>
+  <tr><td>时长</td><td>12-15秒</td></tr>
+  <tr><td>比例</td><td>9:16竖屏</td></tr>
+  <tr><td>BGM</td><td>《生气了》副歌</td></tr>
+</table>
+
+<table>
+  <tr><th>时间</th><th>画面</th><th>字幕</th></tr>
+  <tr><td>0-3秒</td><td>三个玩偶并排，"在听歌"</td><td>"给三个玩偶听papi酱新歌"</td></tr>
+  <tr><td>3-6秒</td><td>羊绅士特写，身体微微后仰</td><td>气泡："OMG……这说的不就是我吗"</td></tr>
+  <tr><td>6-9秒</td><td>莓莓特写，纹丝不动</td><td>气泡："哦。"</td></tr>
+  <tr><td>9-12秒</td><td>啾啾特写，角度很歪（很兴奋）</td><td>气泡："好好听！再放一遍！"</td></tr>
+  <tr><td>12-15秒</td><td>三个一起，羊绅士歪了，莓莓没动，啾啾更歪了</td><td>"听完之后的反应"</td></tr>
+</table>
+
+<h4>发布文案</h4>
+<pre><code>给三个玩偶听了papi酱的《生气了》
+
+羊绅士：被戳中了
+莓莓：无感
+啾啾：要循环播放
+
+你是哪个？
+
+#papi酱 #生气了 #OMG你吓到我了 #钩织玩偶 #crochet #你选谁</code></pre>
+</div>
+
+<!-- PLAN C -->
+
+<div class="plan-card">
+<h3>方案C：羊绅士"生气"名场面（简单版）</h3>
+
+<table>
+  <tr><th style="width:100px">参数</th><th>值</th></tr>
+  <tr><td>时长</td><td>10-12秒</td></tr>
+  <tr><td>比例</td><td>9:16竖屏</td></tr>
+  <tr><td>BGM</td><td>《生气了》</td></tr>
+</table>
+
+<table>
+  <tr><th>时间</th><th>画面</th><th>字幕</th></tr>
+  <tr><td>0-3秒</td><td>羊绅士端正坐姿，帽子手杖完美</td><td>"羊绅士出门前"</td></tr>
+  <tr><td>3-5秒</td><td>切到歪斜状态，帽子歪</td><td>"到家后"</td></tr>
+  <tr><td>5-8秒</td><td>切到没帽子没手杖，缩起来</td><td>"被啾啾撞之后"</td></tr>
+  <tr><td>8-10秒</td><td>莓莓在旁边，纹丝不动</td><td>"莓莓：哦"</td></tr>
+  <tr><td>10-12秒</td><td>定格</td><td>"注意形象。（已阵亡）"</td></tr>
+</table>
+
+<h4>发布文案</h4>
+<pre><code>羊绅士的形象维持时间：约3秒
+
+这首歌简直是他的人生BGM
+
+#papi酱 #生气了 #钩织 #钩织玩偶 #crochet #搞笑</code></pre>
+</div>
+
+<hr>
+
+<!-- AI IMAGE PROMPTS -->
+
+<h2>三、即梦AI图片提示词</h2>
+
+<h3>方案A关键帧</h3>
+
+<h4>帧1：羊绅士完美状态</h4>
+<pre><code>一只手工钩织的毛线小羊玩偶，奶白色毛线，戴着棕色小礼帽，
+拿着迷你手杖，端正地坐在木质桌面上的咖啡杯旁边。姿态优雅，
+很有绅士气质。温暖自然光，背景虚化。生活摄影风格。</code></pre>
+
+<h4>帧2：羊绅士被撞歪</h4>
+<pre><code>一只手工钩织的毛线小羊玩偶，奶白色毛线，身体歪斜，棕色小礼帽
+歪到一边，迷你手杖倒在桌面上。帽子快掉了的感觉，狼狈但可爱。
+木质桌面，温暖自然光。生活摄影风格。</code></pre>
+
+<h4>帧3：羊绅士没帽子崩溃</h4>
+<pre><code>一只手工钩织的毛线小羊玩偶，奶白色毛线，没有帽子，没有手杖，
+缩成一团，看起来很没有安全感。旁边放着被拿掉的棕色小礼帽。
+木质桌面，温暖自然光。生活摄影风格。</code></pre>
+
+<h4>帧4：莓莓无动于衷</h4>
+<pre><code>一只手工钩织草莓玩偶，红色身体，绿色叶子顶部，很短的小腿，
+纹丝不动，表情淡定。旁边是一只歪斜的毛线小羊玩偶。
+木质桌面，温暖自然光。生活摄影风格。</code></pre>
+
+<h3>方案B关键帧</h3>
+
+<h4>帧1：三个并排"听歌"</h4>
+<pre><code>三只手工钩织毛线玩偶并排坐在桌面上，面朝镜头。
+左边小羊（奶白色，棕色礼帽），中间草莓（红色，绿叶子），
+右边小鸟（灰蓝色）。温暖自然光，背景虚化。生活摄影风格。</code></pre>
+
+<h4>帧2：羊绅士"被戳中"</h4>
+<pre><code>一只手工钩织毛线小羊玩偶特写，身体微微后仰，棕色礼帽稍微
+往后推，表情惊讶的感觉。奶白色毛线质感，黑色珠子眼睛。
+温暖自然光，背景虚化。生活摄影风格。</code></pre>
+
+<h4>帧3：啾啾"要循环"</h4>
+<pre><code>一只手工钩织小鸟玩偶特写，灰蓝色毛线，圆脑袋，身体前倾，
+姿态非常兴奋，像是要跳起来。翅膀紧贴身体。温暖自然光，
+背景虚化。生活摄影风格。</code></pre>
+
+<hr>
+
+<!-- TIMING -->
+
+<h2>四、发布时间建议</h2>
+
+<div class="time-block">
+<h4>最佳发布窗口：现在 ~ 48小时内</h4>
+<ul>
+  <li>《生气了》正处于热度高峰</li>
+  <li>抖音算法会优先推荐使用该BGM的新内容</li>
+  <li>越早发越容易吃到流量</li>
+</ul>
+</div>
+
+<table>
+  <tr><th>优先级</th><th>时间</th><th>原因</th></tr>
+  <tr><td>首选</td><td>今天 12:00-13:00</td><td>午休刷抖音高峰</td></tr>
+  <tr><td>次选</td><td>今天 18:00-19:00</td><td>下班通勤</td></tr>
+  <tr><td>再次</td><td>今天 21:00-22:00</td><td>晚间刷手机</td></tr>
+</table>
+
+<hr>
+
+<!-- XIAOHONGSHU -->
+
+<h2>五、小红书配套图文</h2>
+
+<div class="plan-card">
+<h3>小红书发布内容</h3>
+
+<p><strong>封面</strong>：羊绅士歪斜状态 + 大字"我的BGM被papi酱写了"</p>
+
+<h4>标题</h4>
+<p>papi酱新歌《生气了》简直是羊绅士的人生主题曲</p>
+
+<h4>正文</h4>
+<pre><code>刚听了papi酱的《生气了》
+听完觉得：这不就是羊绅士每天的心情吗
+
+出门前：好生气（帽子没戴正）
+被啾啾撞：OMG你吓到我了
+看到莓莓：你的品味配不上我
+帽子被吹走：拜拜拜拜再见了
+
+连歌词都不用改
+直接当他的角色曲
+
+你们听完这首歌想到哪个角色？
+
+#papi酱 #生气了 #OMG你吓到我了 #钩织 #钩织玩偶 #crochet #手工</code></pre>
+</div>
+
+<div class="footer">
+  <p><strong>方案版本</strong>: v1.0 &nbsp;|&nbsp; <strong>日期</strong>: 2026-07-08 &nbsp;|&nbsp; <strong>优先级</strong>: 高（热点窗口48小时）</p>
+  <p style="margin-top:8px">钩织玩偶剧场 - Crochet Doll Theater</p>
+</div>
+
+</div>
+</body>
+</html>
